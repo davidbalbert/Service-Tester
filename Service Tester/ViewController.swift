@@ -9,11 +9,13 @@
 import Cocoa
 
 class ViewController: NSViewController {
+    @IBOutlet var textView: NSTextView!
 
     override func viewDidLoad() {
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.
+        (NSApp.delegate as! AppDelegate).textView = textView
     }
 
     override var representedObject: Any? {
